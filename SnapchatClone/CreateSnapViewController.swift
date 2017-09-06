@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class CreateSnapViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
@@ -42,6 +43,20 @@ class CreateSnapViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func nextTapped(_ sender: Any) {
+        let imageFolder = Storage.storage().reference().child("images")
+    
+        if let image = snapImage.image {
+            if let imageData = UIImageJPEGRepresentation(image, 0.5) {
+                imageFolder.child("myPic.jpeg").putData(imageData, metadata: nil, completion: { (metadata, error) in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        print("Upload Complete")
+                        self.performSegue(withIdentifier: "addImageToSelectUser", sender: nil)
+                    }
+                })
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
