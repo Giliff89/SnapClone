@@ -15,6 +15,8 @@ class CreateSnapViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBOutlet weak var snapImage: UIImageView!
     
+    var imageName = "\(NSUUID().uuidString).jpeg"
+    var imageURL = ""
     var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -47,12 +49,16 @@ class CreateSnapViewController: UIViewController, UIImagePickerControllerDelegat
     
         if let image = snapImage.image {
             if let imageData = UIImageJPEGRepresentation(image, 0.5) {
-                imageFolder.child("myPic.jpeg").putData(imageData, metadata: nil, completion: { (metadata, error) in
+                imageFolder.child(imageName).putData(imageData, metadata: nil, completion: { (metadata, error) in
                     if let error = error {
                         print(error)
                     } else {
-                        print("Upload Complete")
-                        self.performSegue(withIdentifier: "addImageToSelectUser", sender: nil)
+                        
+                        if let imageURL = metadata?.downloadURL()?.absoluteString {
+                            self.imageURL = imageURL
+                            
+                            self.performSegue(withIdentifier: "addImageToSelectUser", sender: nil)
+                        }
                     }
                 })
             }
@@ -68,14 +74,14 @@ class CreateSnapViewController: UIViewController, UIImagePickerControllerDelegat
         return true
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let selectTVC = segue.destination as? SelectUserTableViewController {
+            selectTVC.imageURL = imageURL
+            selectTVC.imageName = imageName
+            if let message = snapDescriptionTextField.text {
+                selectTVC.message = message
+            }
+        }
     }
-    */
 
 }

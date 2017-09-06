@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="396" y="123"/>
         </scene>
         <!--Snaps-->
         <scene sceneID="OB8-la-VTR">
@@ -129,7 +129,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9F-5b-YBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1738" y="123"/>
+            <point key="canvasLocation" x="1460" y="123"/>
         </scene>
         <!--Create a Snap-->
         <scene sceneID="GJb-Ce-n7k">
@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kcr-NY-j1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2521" y="123"/>
+            <point key="canvasLocation" x="2009" y="123"/>
         </scene>
         <!--Select User Table View Controller-->
         <scene sceneID="uWm-yF-C75">
@@ -224,7 +224,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oqo-E6-ohD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3292" y="123"/>
+            <point key="canvasLocation" x="2566" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OYJ-x8-hRQ">

@@ -24,7 +24,6 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     @IBAction func topTapped(_ sender: Any) {
@@ -32,7 +31,7 @@ class AuthViewController: UIViewController {
         if let email = emailTextField.text {
             if let password = passwordTextField.text {
                 if loginMode {
-                    Auth.auth().signIn(withEmail: email, password: password, completion: { (user: User?, error: Error?) in
+                    Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                         if let error = error {
                             print(error)
                         } else {
@@ -41,7 +40,7 @@ class AuthViewController: UIViewController {
                     })
                     
                 } else {
-                    Auth.auth().createUser(withEmail: email, password: password, completion: { (user: User?, error: Error?) in
+                    Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                         if let error = error {
                             print(error)
                         } else {
