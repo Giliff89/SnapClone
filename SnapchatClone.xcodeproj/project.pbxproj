@@ -14,6 +14,7 @@
 		330531DC1F588ECB007C6900 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330531DA1F588ECB007C6900 /* LaunchScreen.storyboard */; };
 		33F06D9D1F5A067F00405DC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33F06D9C1F5A061400405DC1 /* GoogleService-Info.plist */; };
 		33F06D9F1F5F63B500405DC1 /* SnapsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F06D9E1F5F63B500405DC1 /* SnapsTableViewController.swift */; };
+		33F06DA11F5F6BBC00405DC1 /* CreateSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F06DA01F5F6BBC00405DC1 /* CreateSnapViewController.swift */; };
 		FB255F5096A77864403F40BE /* Pods_SnapchatClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00516EBAEC8B54CF8A9FADD8 /* Pods_SnapchatClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		330531DD1F588ECB007C6900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33F06D9C1F5A061400405DC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		33F06D9E1F5F63B500405DC1 /* SnapsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsTableViewController.swift; sourceTree = "<group>"; };
+		33F06DA01F5F6BBC00405DC1 /* CreateSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSnapViewController.swift; sourceTree = "<group>"; };
 		56BB02C787736E1AECB07EDE /* Pods-SnapchatClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapchatClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapchatClone/Pods-SnapchatClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				330531D11F588ECB007C6900 /* AppDelegate.swift */,
 				330531D31F588ECB007C6900 /* AuthViewController.swift */,
 				33F06D9E1F5F63B500405DC1 /* SnapsTableViewController.swift */,
+				33F06DA01F5F6BBC00405DC1 /* CreateSnapViewController.swift */,
 				330531D51F588ECB007C6900 /* Main.storyboard */,
 				330531D81F588ECB007C6900 /* Assets.xcassets */,
 				330531DA1F588ECB007C6900 /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 			files = (
 				33F06D9F1F5F63B500405DC1 /* SnapsTableViewController.swift in Sources */,
 				330531D41F588ECB007C6900 /* AuthViewController.swift in Sources */,
+				33F06DA11F5F6BBC00405DC1 /* CreateSnapViewController.swift in Sources */,
 				330531D21F588ECB007C6900 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
