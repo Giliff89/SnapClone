@@ -12,5 +12,6 @@ target 'SnapchatClone' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
+  pod 'SDWebImage', '~> 4.1'
 
 end
